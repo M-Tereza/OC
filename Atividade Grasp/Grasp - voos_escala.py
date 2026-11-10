@@ -161,6 +161,8 @@ for i in range(parada):
         
         voosOrdemS[posI][posVooRefAtualI+1], voosOrdemS[posP][posVooRefAtualP+1] = voosOrdemS[posP][posVooRefAtualP+1], voosOrdemS[posI][posVooRefAtualI+1]
         
+        SRef=copy.deepcopy(voosOrdemS)
+        
         
         for j in range(len(SRef[posI])):
             horarioPrevistoI=voosOrdemS[posI][j][1]
