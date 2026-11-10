@@ -132,10 +132,11 @@ for i in range(parada):
         S=SAtual
         atrasoTotal=atrasoTotalAtual
         
-        
+'''        
     #Etapa Refinamento
     
     SRef=[[], []]
+    SRef=copy.deepcopy(voosOrdemS)
     posI=0
     posP=0
     posVooRefAtualI=0
@@ -160,8 +161,6 @@ for i in range(parada):
     for k in range (qtdPermutacoes-1):
         
         voosOrdemS[posI][posVooRefAtualI+1], voosOrdemS[posP][posVooRefAtualP+1] = voosOrdemS[posP][posVooRefAtualP+1], voosOrdemS[posI][posVooRefAtualI+1]
-        
-        SRef=copy.deepcopy(voosOrdemS)
         
         
         for j in range(len(SRef[posI])):
@@ -191,7 +190,9 @@ for i in range(parada):
         posVooRefAtualP+=1
         
         
-
+'''
 
 imprimeSolucao(S)
+print(calculaAtrasoTotal(S))
+
 
